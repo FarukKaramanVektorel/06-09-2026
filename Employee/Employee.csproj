@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EB34032A-9F3E-4CF3-AB66-E1F01DF455DD}</ProjectGuid>
+    <ProjectGuid>{975CC9F9-3A93-4BBF-B230-BB0FA94D6C10}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_06_09_2026</RootNamespace>
-    <AssemblyName>06-09-2026</AssemblyName>
+    <RootNamespace>Employee</RootNamespace>
+    <AssemblyName>Employee</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,20 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bag.cs" />
-    <Compile Include="Car.cs" />
-    <Compile Include="Human.cs" />
-    <Compile Include="Motor.cs" />
-    <Compile Include="Ogretmen.cs" />
-    <Compile Include="Pencil.cs" />
-    <Compile Include="Printer.cs" />
+    <Compile Include="Calisan.cs" />
+    <Compile Include="Gelistirici.cs" />
+    <Compile Include="Pazarlamaci.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="TamirHane.cs" />
-    <Compile Include="Tasit.cs" />
-    <Compile Include="Teker.cs" />
-    <Compile Include="Yemek.cs" />
     <Compile Include="Yonetici.cs" />
   </ItemGroup>
   <ItemGroup>

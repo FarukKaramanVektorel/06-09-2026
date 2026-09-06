@@ -22,7 +22,10 @@ namespace _06_09_2026
             LastName = lastName;
             Name = name;
         }
-
+		public virtual void nefesAl()
+		{
+            Console.WriteLine("Nefes alınıyor...");
+		}
         public Human()
         {
             Console.WriteLine("Human sınıfı ayağa kalktı");
@@ -80,7 +83,12 @@ namespace _06_09_2026
 			set { _name = value; }
 		}
 
-		public string info()
+		public virtual void yemekYe(Yemek yemek)
+        {
+            Console.WriteLine($"{yemek.info()} Yemek yiyorum...");
+        }
+
+        public string info()
 		{
 			return $"Ad: {Name+" "+LastName}, Doğum Tarihi: {BirthDay} Boy: {Height} Kilo: {Weight}";
 		}
