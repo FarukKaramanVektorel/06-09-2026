@@ -6,24 +6,34 @@ using System.Threading.Tasks;
 
 namespace _06_09_2026
 {
-    internal class Car
+    internal class Car : Tasit// is a
     {
-		private int _vitesSayisi;
-        public int MyProperty { get; set; }
+        public string Marka { get; }
+        public string Model { get; }
+        public Motor Motor { get; set; }// has a
+        public Teker[] Tekerler { get; set; } // has a
 
-        public int VitesSayisi
-		{
-			get { return _vitesSayisi; }
-			set { if (value > 0 && value < 8)
-				{
-					_vitesSayisi = value;
-				}
-				else
-				{
-                    Console.WriteLine("Bu kadarda olmaz...");
-				}
-				}
-		}
+        public Car(string marka, string model, Motor motor, Teker[] tekerler)
+        {
+            Marka = marka;
+            Model = model;
+            Motor = motor;
+            Tekerler = tekerler;
+        }
 
-	}
+        public void TekerDegis(Teker teker)// uses a
+        {
+            Console.WriteLine($"{teker} değiştirildi...");
+        }
+
+        public void TamireGotur(TamirHane tamirci)// uses a
+        {
+            tamirci.TamirEt();
+        }
+
+        public string info()
+        {
+            return $"Marka: {Marka}, Model: {Model},\nMotor: {Motor.info()},\nTekerler: {string.Join(", ", Tekerler.Select(t => t.info()))}";
+        }
+    }
 }

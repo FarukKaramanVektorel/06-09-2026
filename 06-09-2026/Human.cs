@@ -23,6 +23,11 @@ namespace _06_09_2026
             Name = name;
         }
 
+        public Human()
+        {
+            Console.WriteLine("Human sınıfı ayağa kalktı");
+        }
+
         public double Weight
 		{
 			get { return _weight; }
@@ -49,7 +54,7 @@ namespace _06_09_2026
                 }
                 else
                 {
-                    _weight = value;
+                    _height = value;
                 }
             }
 		}

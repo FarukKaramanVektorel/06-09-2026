@@ -10,12 +10,18 @@ namespace _06_09_2026
     {
         static void Main(string[] args)
         {
-            Human mahmut = new Human(80, 175, new DateTime(2000, 10, 15), "Keser", "Mustafa");
+            Teker teker = new Teker("Michelin", 160, 60, 55);
+            Teker teker1 = new Teker("Michelin", 160, 60, 55);
+            Teker teker2 = new Teker("Michelin", 160, 60, 55);
+            Teker teker3 = new Teker("Michelin", 160, 60, 55);
+            Motor motor = new Motor("Honda", 1000, "Benzin & LPG");
+            TamirHane tamirHane = new TamirHane("Mithat");
+            Car arac= new Car("Honda", "Civic", motor, new Teker[] { teker, teker1, teker2, teker3 });
 
-            mahmut.Weight = -85;
-            Console.WriteLine(mahmut.info());
-
-
+            arac.Calistir();
+            arac.TamireGotur(tamirHane);
+            arac.Durdur();
+            Console.WriteLine(arac.info());
             Console.ReadLine();
         }
     }
